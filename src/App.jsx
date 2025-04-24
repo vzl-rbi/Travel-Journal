@@ -1,43 +1,47 @@
 import Header from '../components/Header';
 import Entry from '../components/Entry';
+import data from './data';
 function App() {
+    const entryData = data.map((entry) =>
+        <Entry
+        key={entry.id}
+        entry={entry} //alternative method is //{...entry} spread operator // 
+        /*this method make in Entry.jsx like this 
+        className="main-image"
+        src={props.img.src}
+        alt={props.img.alt} 
+        instead of 
+        className="main-image"
+        src={props.entry.img.src}
+        alt={props.entry.img.alt}
+        */
+        
+        />
+            
+    );
+    //const dataList = data.map((listData, index) =>
+        //<props
+            //key={index} //or Alternatively, key={listData.id} use this insted of index and remove index from map function
+           /* marker={listData.marker}
+            country={listData.country}
+            googleMapLink={listData.googleMapLink}
+            title={listData.title}
+            dates={listData.dates}
+            text={listData.text}
+            image={listData.img.src}
+            alt={listData.alt}
+           */
+       // />
+    //);
+    
     return (
-        <main>
-            <Header />
-            <Entry
-                marker="../images/marker.png"
-                country="Japan"
-                googleMapLink="https://www.google.com/maps/place/Mount+Fuji/@35.3606421,138.7170637,15z/data=!3m1!4b1!4m6!3m5!1s0x6019629a42fdc899:0xa6a1fcc916f3a4df!8m2!3d35.3606255!4d138.7273634!16zL20vMGNrczA?entry=ttu"
-                title="Mount Fuji"
-                dates="12 Jan, 2021 - 24 Jan, 2021"
-                text="Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
-                image="../images/mountFuji.png"
-                alt="mount fuji"
-
-            />
-            <Entry
-                marker="../images/marker.png"
-                country="Nepal"
-                googleMapLink="https://g.co/kgs/uY21RLh"
-                title="Mount Everest"
-                dates="12 Nov, 2022 - 24 Dec, 2022"
-                text="Mount Everest is the highest mountain in the world, with a peak at 8,848 meters (29,029 ft) above sea level. It is located in the Himalayas on the border of Nepal and Tibet."
-                image="../images/everest.png"
-                alt="mount everest"
-
-            />
-            <Entry
-                marker="../images/marker.png"
-                country="India"
-                googleMapLink="https://g.co/kgs/2v7Z5D"
-                title="Taj Mahal"
-                dates="12 Jan, 2023 - 24 Jan, 2023"
-                text="The Taj Mahal is an Islamic ivory-white marble mausoleum on the right bank of the river Yamuna in the Indian city of Agra. It was commissioned in 1632 by the Mughal emperor Shah Jahan (reigned from 1628 to 1658) in memory of his favorite wife, Mumtaz Mahal."
-                image="../images/taj-mahal.png"
-                alt="taj mahal"
-
-            />
+        <>
+        <Header />
+        <main className="container">
+            {entryData}
         </main>
+        </>
+        
 
     )
 }
