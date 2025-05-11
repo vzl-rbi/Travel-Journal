@@ -1,10 +1,21 @@
-* {
+html, body {
   margin: 0;
+<<<<<<< HEAD
   padding:0;
+=======
+}
+
+body {
+  font-family: Inter;
+}
+
+.container {
+  margin: 45px 40px;
+>>>>>>> 205b25131e82060b1760b217876a5708829d9965
 }
 
 header {
-  background: red;
+  background: #F55A5A;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,36 +23,19 @@ header {
   height: 55px;
 }
 
-header>img {
-  display: block;
+header > img {
+  width: 24px;
   margin-right: 7px;
-  width: 25px;
-  height: 25px;
 }
 
-header>h1 {
+header > h1 {
   font-size: 0.9rem;
   font-weight: 500;
-  font-family: inherit;
 }
 
-/*
-section {
-  display: flex;
-  justify-content: center;
-  display: flex;
-  align-items: center;
-}
-
-section>nav>img {
-  display: block;
-  margin-right: 7px;
-  width: 200px;
-  height: 300px;
-}
-*/
 article.journal-entry {
   display: flex;
+  margin-bottom: 36px;
 }
 
 article.journal-entry .marker {
@@ -93,6 +87,6 @@ article.journal-entry .main-image {
   font-size: 0.8rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: vertical;  
   overflow: hidden;
 }

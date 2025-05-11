@@ -19,7 +19,11 @@
     "postcss": "^8.4.31"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "set BROWSER=none&& set WDS_SOCKET_PORT=0&& vite --port 3000",
+=======
+    "start": "cross-env BROWSER=none WDS_SOCKET_PORT=0 vite --port 3000",
+>>>>>>> 205b25131e82060b1760b217876a5708829d9965
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest"
